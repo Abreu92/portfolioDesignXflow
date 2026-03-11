@@ -118,7 +118,7 @@ body::before {
    fica ACIMA das texturas de fundo (z-index: 0)
    */
 header, section, footer {
-    position: relative;                  /* Necessário para z-index funcionar */
+    position: sticky;                  /* Necessário para z-index funcionar */
     z-index: 1;
 }
 
@@ -608,6 +608,9 @@ footer {
     position: relative;
     overflow: hidden;
     border-top: 1px solid rgba(157, 78, 221, 0.25);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer::before {
@@ -670,8 +673,8 @@ footer:hover p {
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 90%;
-    max-height: 90vh;
+    max-width: 80vw;
+    max-height: 65vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -696,7 +699,7 @@ footer:hover p {
 
 .close {
     position: absolute;
-    top: 20px;
+    top: 80px;
     right: 40px;
     color: #fff;
     font-size: 40px;
